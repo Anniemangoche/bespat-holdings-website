@@ -21,21 +21,21 @@
             --gold-light: #e0c06a;
             --gold-glow: rgba(201, 151, 46, 0.2);
             --dark: #0a0a0a;
-            --dark-surface: #111111;
-            --dark-card: #161616;
-            --dark-border: #2a2a2a;
-            --bone: #f5f0eb;
-            --bone-muted: #c5bfb8;
-            --muted: #8a8580;
-            --muted-light: rgba(255, 255, 255, 0.7);
-            --font-display: 'Fraunces', serif;
-            --font-body: 'Inter', sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
+            --dark-surface: #f8f6f4;
+            --dark-card: #ffffff;
+            --dark-border: #e8e4e0;
+            --bone: #1a1a1a;
+            --bone-muted: #4a4540;
+            --muted: #6b6560;
+            --muted-light: rgba(0, 0, 0, 0.7);
+            --font-display: Arial, Helvetica, sans-serif;
+            --font-body: Arial, Helvetica, sans-serif;
+            --font-mono: Arial, Helvetica, sans-serif;
             --acc-agri: #5F7A3E;
         }
 
         body {
-            background: var(--dark);
+            background: #ffffff;
             color: var(--bone);
             font-family: var(--font-body);
             line-height: 1.6;
@@ -60,6 +60,7 @@
             font-size: clamp(2rem, 4vw, 3.2rem);
             line-height: 1.1;
             letter-spacing: -0.02em;
+            color: var(--bone);
         }
         .sec-title em {
             color: var(--gold);
@@ -112,7 +113,7 @@
 
         .btn-gold {
             background: var(--gold);
-            color: var(--dark);
+            color: #ffffff;
         }
         .btn-gold:hover {
             background: var(--gold-light);
@@ -122,12 +123,11 @@
 
         .btn-outline-light {
             background: transparent;
-            color: var(--bone);
-            border: 1.5px solid rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(4px);
+            color: #ffffff;
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
         }
         .btn-outline-light:hover {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.15);
             border-color: var(--gold);
             color: var(--gold);
             transform: translateY(-3px);
@@ -135,7 +135,7 @@
 
         .btn-primary {
             background: var(--gold);
-            color: var(--dark);
+            color: #ffffff;
         }
         .btn-primary:hover {
             background: var(--gold-light);
@@ -143,7 +143,7 @@
             box-shadow: 0 16px 48px rgba(201, 151, 46, 0.3);
         }
 
-        /* ── NAV ── SLIGHTLY DARKER HEADER ── */
+        /* ── NAV ── DARK GREY HEADER ── */
         .site-nav {
             position: fixed;
             top: 0;
@@ -154,39 +154,58 @@
             justify-content: space-between;
             align-items: center;
             padding: 0.8rem 2rem;
-            background: rgba(10, 10, 10, 0.55);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(60, 60, 60, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             transition: background 0.3s ease;
         }
         .site-nav.scrolled {
-            background: rgba(10, 10, 10, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            background: rgba(40, 40, 40, 0.96);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
         }
         .nav-logo {
             display: flex;
             align-items: center;
             gap: 0.7rem;
             text-decoration: none;
-            color: var(--bone);
+            color: #ffffff;
             flex-shrink: 0;
         }
         .nav-logo img {
             height: 40px;
             width: auto;
             object-fit: contain;
+            display: block;
         }
-        .nav-logo-text {
+        .nav-logo .logo-text {
             font-family: var(--font-display);
             font-weight: 700;
             font-size: 1.2rem;
             letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
         }
-        .nav-logo-text span {
+        .nav-logo .logo-text span {
             font-weight: 300;
-            color: var(--bone-muted);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .nav-logo .logo-fallback {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: #ffffff;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.2rem;
+            font-family: var(--font-display);
+            box-shadow: 0 0 30px rgba(201, 151, 46, 0.2);
         }
 
         .nav-hamburger {
@@ -203,7 +222,7 @@
             display: block;
             width: 28px;
             height: 2px;
-            background: var(--bone);
+            background: #ffffff;
             transition: all 0.3s ease;
             border-radius: 2px;
         }
@@ -225,7 +244,7 @@
             transition: all 0.3s ease;
         }
         .nav-links a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.75);
             text-decoration: none;
             font-size: 0.75rem;
             font-weight: 500;
@@ -237,12 +256,12 @@
         }
         .nav-links a:hover,
         .nav-links a.active {
-            color: var(--bone);
+            color: #ffffff;
             border-bottom-color: var(--gold);
         }
         .nav-cta {
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--dark);
+            color: #ffffff;
             padding: 0.4rem 1.4rem;
             border-radius: 40px;
             font-weight: 700;
@@ -269,7 +288,7 @@
                 right: -100%;
                 width: 280px;
                 height: 100vh;
-                background: rgba(10, 10, 10, 0.98);
+                background: rgba(40, 40, 40, 0.98);
                 backdrop-filter: blur(20px);
                 -webkit-backdrop-filter: blur(20px);
                 flex-direction: column;
@@ -285,11 +304,13 @@
             .nav-links a {
                 font-size: 1rem;
                 white-space: normal;
+                color: rgba(255, 255, 255, 0.8);
             }
             .nav-cta {
                 align-self: flex-start;
                 font-size: 0.85rem;
                 padding: 0.6rem 2rem;
+                color: #ffffff;
             }
             .site-nav {
                 padding: 0.6rem 1.2rem;
@@ -297,7 +318,7 @@
             .nav-logo img {
                 height: 32px;
             }
-            .nav-logo-text {
+            .nav-logo .logo-text {
                 font-size: 1rem;
             }
         }
@@ -310,7 +331,7 @@
             align-items: center;
             padding: 8rem 3rem 4rem;
             overflow: hidden;
-            background: var(--dark);
+            background: #1a1a1a;
         }
 
         .page-hero-bg {
@@ -322,24 +343,27 @@
             background-position: center 40%;
             background-repeat: no-repeat;
         }
-        .page-hero-bg::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg,
-                    rgba(10, 10, 10, 0.25) 0%,
-                    rgba(10, 10, 10, 0.1) 50%,
-                    rgba(10, 10, 10, 0.35) 100%);
-        }
+        /* NO overlay — image stays fully clear */
 
         .page-hero .gold-accent {
             position: absolute;
-            width: 600px;
-            height: 600px;
+            width: 700px;
+            height: 700px;
             border-radius: 50%;
             background: radial-gradient(circle, rgba(201, 151, 46, 0.08) 0%, transparent 70%);
-            top: -200px;
-            right: -150px;
+            top: -250px;
+            right: -200px;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .page-hero .gold-accent-2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 151, 46, 0.05) 0%, transparent 70%);
+            bottom: -200px;
+            left: -100px;
             z-index: 1;
             pointer-events: none;
         }
@@ -356,8 +380,8 @@
             font-size: clamp(2.8rem, 6vw, 4.8rem);
             line-height: 1.0;
             letter-spacing: -0.02em;
-            color: var(--bone);
-            text-shadow: 0 4px 60px rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+            text-shadow: 0 4px 40px rgba(0, 0, 0, 0.7);
         }
         .page-hero h1 em {
             color: var(--gold);
@@ -367,11 +391,11 @@
 
         .page-hero p.lead {
             font-size: 1.15rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.92);
             margin-top: 1.5rem;
             max-width: 620px;
             line-height: 1.8;
-            text-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
             font-weight: 400;
         }
 
@@ -389,12 +413,11 @@
             gap: 2rem;
             max-width: 1240px;
             margin: 0 auto;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(10px);
             padding: 1.8rem 2.5rem;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .stat-num {
             font-family: var(--font-mono);
@@ -402,11 +425,10 @@
             font-weight: 600;
             color: var(--gold);
             letter-spacing: -0.02em;
-            text-shadow: 0 0 40px rgba(201, 151, 46, 0.2);
         }
         .stat-label {
             font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.75);
             font-weight: 400;
             letter-spacing: 0.04em;
             margin-top: 0.1rem;
@@ -433,39 +455,23 @@
             border-radius: 20px;
             border: 1px solid var(--dark-border);
             display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: var(--muted);
-            font-size: 0.85rem;
+            align-items: flex-end;
+            justify-content: flex-start;
             gap: 0.6rem;
             background-image: url('sugarcane.jpg');
             background-size: cover;
             background-position: center;
             position: relative;
             overflow: hidden;
-        }
-        .about-img-wrap::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.05));
-            border-radius: 20px;
-        }
-        .about-img-wrap .ph-icon {
-            font-size: 3rem;
-            color: var(--gold);
-            opacity: 0.3;
-            z-index: 1;
+            padding: 1.2rem;
         }
         .about-img-wrap span {
             z-index: 1;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 0.3rem 1.2rem;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 0.3rem 1rem;
             border-radius: 20px;
             font-size: 0.7rem;
-            color: var(--bone-muted);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--bone);
         }
 
         /* ── FARM GRID ── */
@@ -477,16 +483,17 @@
             margin: 0 auto;
         }
         .farm-card {
-            background: var(--dark-card);
+            background: #ffffff;
             border: 1px solid var(--dark-border);
             border-radius: 20px;
             overflow: hidden;
             transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
         }
         .farm-card:hover {
             transform: translateY(-8px);
             border-color: var(--acc-agri);
-            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.08);
         }
         .farm-card .farm-img {
             height: 220px;
@@ -540,9 +547,10 @@
             border: 1px solid var(--dark-border);
             padding: 0.75rem 1.8rem;
             border-radius: 40px;
-            background: var(--dark-card);
+            background: #ffffff;
             color: var(--bone-muted);
             transition: 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
         .crop-chip:hover {
             border-color: var(--acc-agri);
@@ -559,17 +567,18 @@
             margin: 0 auto;
         }
         .market-card {
-            background: var(--dark-card);
+            background: #ffffff;
             border: 1px solid var(--dark-border);
             border-radius: 20px;
             padding: 2rem 1.8rem;
             text-align: center;
             transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
         }
         .market-card:hover {
             transform: translateY(-6px);
             border-color: var(--acc-agri);
-            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
         }
         .market-card i {
             color: var(--acc-agri);
@@ -586,12 +595,11 @@
             height: 50px;
             width: auto;
             object-fit: contain;
-            filter: brightness(0.9) contrast(1.1);
             transition: 0.3s;
             margin-bottom: 0.5rem;
         }
         .market-card:hover .market-logo {
-            filter: brightness(1.2) contrast(1.2);
+            transform: scale(1.05);
         }
 
         /* ── EXPORT NOTE ── */
@@ -603,9 +611,10 @@
             color: var(--muted);
             line-height: 1.8;
             padding: 1.5rem 2rem;
-            background: var(--dark-card);
+            background: #ffffff;
             border-radius: 16px;
             border: 1px solid var(--dark-border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
         }
         .export-note i {
             color: var(--gold);
@@ -614,7 +623,7 @@
 
         /* ── CTA ── */
         .cta-band {
-            background: var(--dark-card);
+            background: #f8f6f4;
             border-top: 1px solid var(--dark-border);
             border-bottom: 1px solid var(--dark-border);
             text-align: center;
@@ -626,7 +635,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at center, rgba(201, 151, 46, 0.06) 0%, transparent 60%);
+            background: radial-gradient(ellipse at center, rgba(201, 151, 46, 0.04) 0%, transparent 60%);
         }
         .cta-band h2 {
             font-family: var(--font-display);
@@ -634,6 +643,7 @@
             font-size: clamp(2rem, 4.6vw, 3.2rem);
             position: relative;
             z-index: 1;
+            color: var(--bone);
         }
         .cta-band h2 em {
             color: var(--gold);
@@ -650,12 +660,21 @@
             position: relative;
             z-index: 1;
         }
+        .cta-band .btn-outline-light {
+            color: var(--bone);
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+        .cta-band .btn-outline-light:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
 
-        /* ── FOOTER ── */
+        /* ── FOOTER (DARK GREY) ── */
         .site-footer {
-            background: var(--dark);
-            border-top: 1px solid var(--dark-border);
+            background: #2a2a2a;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             padding: 3rem 2rem 1.5rem;
+            color: #d0d0d0;
         }
         .footer-grid {
             max-width: 1240px;
@@ -668,18 +687,19 @@
             font-family: var(--font-display);
             font-weight: 700;
             font-size: 1.5rem;
+            color: #ffffff;
         }
         .footer-brand .fb-logo span {
             color: var(--gold);
         }
         .footer-brand .fb-tag {
-            color: var(--muted);
+            color: #b0b0b0;
             font-size: 0.85rem;
             max-width: 300px;
             margin: 0.6rem 0 1rem;
         }
         .footer-brand .fb-addr {
-            color: var(--bone-muted);
+            color: #b0b0b0;
             font-size: 0.8rem;
             line-height: 1.8;
         }
@@ -687,11 +707,11 @@
             font-family: var(--font-display);
             font-size: 1rem;
             margin-bottom: 1rem;
-            color: var(--bone);
+            color: #ffffff;
         }
         .footer-col a {
             display: block;
-            color: var(--muted);
+            color: #b0b0b0;
             text-decoration: none;
             font-size: 0.85rem;
             padding: 0.3rem 0;
@@ -705,11 +725,11 @@
             max-width: 1240px;
             margin: 2rem auto 0;
             padding-top: 1.5rem;
-            border-top: 1px solid var(--dark-border);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             display: flex;
             justify-content: space-between;
             font-size: 0.75rem;
-            color: var(--muted);
+            color: #888;
         }
 
         /* ── RESPONSIVE ── */
@@ -791,8 +811,11 @@
     <!-- ══ NAV ══ -->
     <nav class="site-nav" id="siteNav">
         <a class="nav-logo" href="index.html">
-            <img src="HUMAN logo.png" alt="Bespat Holdings Logo" />
-            <div class="nav-logo-text">BESPAT <span>HOLDINGS</span></div>
+            <img src="HUMAN logo.png" alt="Bespat Holdings Logo" onerror="this.style.display='none'; this.parentElement.querySelector('.logo-fallback').style.display='flex';" />
+            <div class="logo-text" style="display:flex; align-items:center; gap:0.7rem;">
+                <span class="logo-fallback">B</span>
+                <span>BESPAT <span style="font-weight:300;color:rgba(255,255,255,0.6);">HOLDINGS</span></span>
+            </div>
         </a>
 
         <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
@@ -817,8 +840,9 @@
     <header class="page-hero">
         <div class="page-hero-bg"></div>
         <div class="gold-accent"></div>
+        <div class="gold-accent-2"></div>
         <div class="page-hero-inner">
-            <span class="eyebrow">Division 06 · Commercial Agriculture</span>
+            <span class="eyebrow" style="color:var(--gold); text-shadow:0 2px 10px rgba(0,0,0,0.5);">Division 06 · Commercial Agriculture</span>
             <h1>Bespat Agri-Trade <em>&amp; Farms</em></h1>
             <p class="lead">A commercially driven agribusiness delivering reliable grain, legume, and sugarcane output that supports food security, industrial supply chains, and regional agro-trade markets.</p>
             <div class="page-hero-btns">
@@ -831,7 +855,7 @@
     <div class="divider"></div>
 
     <!-- ══ STATS ══ -->
-    <section class="sec" style="background: var(--dark); padding-top: 3rem; padding-bottom: 3rem;">
+    <section class="sec" style="background: #ffffff; padding-top: 3rem; padding-bottom: 3rem;">
         <div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem;">
             <div class="stats-bar">
                 <div><div class="stat-num">2</div><div class="stat-label">Farming Estates</div></div>
@@ -845,7 +869,7 @@
     <div class="divider"></div>
 
     <!-- ══ ABOUT ══ -->
-    <section class="sec" style="background: var(--dark-surface); border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border);">
+    <section class="sec" style="background: #f8f6f4; border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border);">
         <div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem;">
             <div class="about-grid">
                 <div class="about-body">
@@ -856,7 +880,6 @@
                     <a class="btn btn-primary" href="contact-group.html" style="margin-top:0.8rem">Speak to the Agri-Trade Team</a>
                 </div>
                 <div class="about-img-wrap">
-                    <i class="fa-solid fa-wheat-awn ph-icon"></i>
                     <span>Bespat Agri-Trade · Sugarcane Harvest</span>
                 </div>
             </div>
@@ -866,7 +889,7 @@
     <div class="divider"></div>
 
     <!-- ══ FARMS ══ -->
-    <section class="sec" style="background: var(--dark);">
+    <section class="sec" style="background: #ffffff;">
         <div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem;">
             <div class="sec-header center">
                 <span class="eyebrow">Our Estates</span>
@@ -901,7 +924,7 @@
     <div class="divider"></div>
 
     <!-- ══ CROPS ══ -->
-    <section class="sec" style="background: var(--dark-surface); border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border);">
+    <section class="sec" style="background: #f8f6f4; border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border);">
         <div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem;">
             <div class="sec-header center">
                 <span class="eyebrow">What We Grow</span>
@@ -919,7 +942,7 @@
     <div class="divider"></div>
 
     <!-- ══ MARKET PARTNERS ══ -->
-    <section class="sec" style="background: var(--dark);">
+    <section class="sec" style="background: #ffffff;">
         <div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem;">
             <div class="sec-header center">
                 <span class="eyebrow">Market Partners</span>
@@ -958,7 +981,7 @@
         </div>
     </div>
 
-    <!-- ══ FOOTER ══ -->
+    <!-- ══ FOOTER (DARK GREY) ══ -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
@@ -1001,7 +1024,6 @@
             navLinks.classList.toggle('open');
         });
 
-        // Close menu when a link is clicked
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -1009,7 +1031,6 @@
             });
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!e.target.closest('.site-nav')) {
                 hamburger.classList.remove('active');
@@ -1017,7 +1038,6 @@
             }
         });
 
-        // ── SCROLL EFFECT FOR HEADER ──
         window.addEventListener('scroll', function() {
             const nav = document.getElementById('siteNav');
             if (window.scrollY > 50) {

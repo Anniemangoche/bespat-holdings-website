@@ -21,20 +21,20 @@
             --gold-light: #e0c06a;
             --gold-glow: rgba(201, 151, 46, 0.2);
             --dark: #0a0a0a;
-            --dark-surface: #111111;
-            --dark-card: #161616;
-            --dark-border: #2a2a2a;
-            --bone: #f5f0eb;
-            --bone-muted: #c5bfb8;
-            --muted: #8a8580;
-            --muted-light: rgba(255, 255, 255, 0.7);
-            --font-display: 'Fraunces', serif;
-            --font-body: 'Inter', sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
+            --dark-surface: #f8f6f4;
+            --dark-card: #ffffff;
+            --dark-border: #e8e4e0;
+            --bone: #1a1a1a;
+            --bone-muted: #4a4540;
+            --muted: #6b6560;
+            --muted-light: rgba(0, 0, 0, 0.7);
+            --font-display: Arial, Helvetica, sans-serif;
+            --font-body: Arial, Helvetica, sans-serif;
+            --font-mono: Arial, Helvetica, sans-serif;
         }
 
         body {
-            background: var(--dark);
+            background: #ffffff;
             color: var(--bone);
             font-family: var(--font-body);
             line-height: 1.6;
@@ -59,6 +59,7 @@
             font-size: clamp(2rem, 4vw, 3.2rem);
             line-height: 1.1;
             letter-spacing: -0.02em;
+            color: var(--bone);
         }
         .sec-title em {
             color: var(--gold);
@@ -111,7 +112,7 @@
 
         .btn-gold {
             background: var(--gold);
-            color: var(--dark);
+            color: #ffffff;
         }
         .btn-gold:hover {
             background: var(--gold-light);
@@ -121,12 +122,11 @@
 
         .btn-outline-light {
             background: transparent;
-            color: var(--bone);
-            border: 1.5px solid rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(4px);
+            color: #ffffff;
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
         }
         .btn-outline-light:hover {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.15);
             border-color: var(--gold);
             color: var(--gold);
             transform: translateY(-3px);
@@ -134,7 +134,7 @@
 
         .btn-primary {
             background: var(--gold);
-            color: var(--dark);
+            color: #ffffff;
         }
         .btn-primary:hover {
             background: var(--gold-light);
@@ -142,7 +142,7 @@
             box-shadow: 0 16px 48px rgba(201, 151, 46, 0.3);
         }
 
-        /* ── NAV ── */
+        /* ── NAV ── DARK GREY HEADER ── */
         .site-nav {
             position: fixed;
             top: 0;
@@ -153,23 +153,23 @@
             justify-content: space-between;
             align-items: center;
             padding: 0.8rem 2rem;
-            background: rgba(10, 10, 10, 0.55);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(60, 60, 60, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             transition: background 0.3s ease;
         }
         .site-nav.scrolled {
-            background: rgba(10, 10, 10, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            background: rgba(40, 40, 40, 0.96);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
         }
         .nav-logo {
             display: flex;
             align-items: center;
             gap: 0.7rem;
             text-decoration: none;
-            color: var(--bone);
+            color: #ffffff;
             flex-shrink: 0;
         }
         .nav-logo img {
@@ -186,10 +186,11 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            color: #ffffff;
         }
         .nav-logo .logo-text span {
             font-weight: 300;
-            color: var(--bone-muted);
+            color: rgba(255, 255, 255, 0.6);
         }
         .nav-logo .logo-fallback {
             display: none;
@@ -198,7 +199,7 @@
             width: 38px;
             height: 38px;
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--dark);
+            color: #ffffff;
             border-radius: 50%;
             font-weight: 700;
             font-size: 1.2rem;
@@ -220,7 +221,7 @@
             display: block;
             width: 28px;
             height: 2px;
-            background: var(--bone);
+            background: #ffffff;
             transition: all 0.3s ease;
             border-radius: 2px;
         }
@@ -242,7 +243,7 @@
             transition: all 0.3s ease;
         }
         .nav-links a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.75);
             text-decoration: none;
             font-size: 0.75rem;
             font-weight: 500;
@@ -254,12 +255,12 @@
         }
         .nav-links a:hover,
         .nav-links a.active {
-            color: var(--bone);
+            color: #ffffff;
             border-bottom-color: var(--gold);
         }
         .nav-cta {
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--dark);
+            color: #ffffff;
             padding: 0.4rem 1.4rem;
             border-radius: 40px;
             font-weight: 700;
@@ -286,7 +287,7 @@
                 right: -100%;
                 width: 280px;
                 height: 100vh;
-                background: rgba(10, 10, 10, 0.98);
+                background: rgba(40, 40, 40, 0.98);
                 backdrop-filter: blur(20px);
                 -webkit-backdrop-filter: blur(20px);
                 flex-direction: column;
@@ -302,11 +303,13 @@
             .nav-links a {
                 font-size: 1rem;
                 white-space: normal;
+                color: rgba(255, 255, 255, 0.8);
             }
             .nav-cta {
                 align-self: flex-start;
                 font-size: 0.85rem;
                 padding: 0.6rem 2rem;
+                color: #ffffff;
             }
             .site-nav {
                 padding: 0.6rem 1.2rem;
@@ -327,7 +330,7 @@
             align-items: center;
             padding: 8rem 3rem 4rem;
             overflow: hidden;
-            background: var(--dark);
+            background: #1a1a1a;
         }
 
         .page-hero-bg {
@@ -339,15 +342,7 @@
             background-position: center 30%;
             background-repeat: no-repeat;
         }
-        .page-hero-bg::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg,
-                    rgba(10, 10, 10, 0.25) 0%,
-                    rgba(10, 10, 10, 0.1) 50%,
-                    rgba(10, 10, 10, 0.35) 100%);
-        }
+        /* NO overlay — image stays fully clear */
 
         .page-hero .gold-accent {
             position: absolute;
@@ -373,8 +368,8 @@
             font-size: clamp(2.8rem, 6vw, 4.8rem);
             line-height: 1.0;
             letter-spacing: -0.02em;
-            color: var(--bone);
-            text-shadow: 0 4px 60px rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+            text-shadow: 0 4px 40px rgba(0, 0, 0, 0.7);
         }
         .page-hero h1 em {
             color: var(--gold);
@@ -384,11 +379,11 @@
 
         .page-hero p.lead {
             font-size: 1.15rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.92);
             margin-top: 1.5rem;
             max-width: 620px;
             line-height: 1.8;
-            text-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
             font-weight: 400;
         }
 
@@ -409,23 +404,24 @@
         }
 
         .contact-card {
-            background: var(--dark-card);
+            background: #ffffff;
             border: 1px solid var(--dark-border);
             border-radius: 20px;
             padding: 2.4rem 2rem;
             transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
         }
         .contact-card:hover {
             transform: translateY(-8px);
             border-color: var(--gold);
-            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.08);
         }
         .contact-card .contact-icon {
             width: 70px;
             height: 70px;
             border-radius: 50%;
-            background: color-mix(in srgb, var(--gold) 15%, #1a1a1a);
+            background: color-mix(in srgb, var(--gold) 12%, #f0ede8);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -467,7 +463,7 @@
             margin: 0 auto;
         }
         .division-contact-item {
-            background: var(--dark-card);
+            background: #ffffff;
             border: 1px solid var(--dark-border);
             border-radius: 16px;
             padding: 1.5rem 1.8rem;
@@ -475,6 +471,7 @@
             align-items: center;
             gap: 1.2rem;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
         .division-contact-item:hover {
             border-color: var(--gold);
@@ -484,7 +481,7 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: color-mix(in srgb, var(--gold) 12%, #1a1a1a);
+            background: color-mix(in srgb, var(--gold) 12%, #f0ede8);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -517,13 +514,14 @@
 
         /* ── MAP PLACEHOLDER ── */
         .map-placeholder {
-            background: var(--dark-card);
+            background: #ffffff;
             border: 1px solid var(--dark-border);
             border-radius: 20px;
             padding: 3rem 2rem;
             text-align: center;
             max-width: 900px;
             margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
         }
         .map-placeholder i {
             font-size: 3rem;
@@ -539,7 +537,7 @@
 
         /* ── CTA ── */
         .cta-band {
-            background: var(--dark-card);
+            background: #f8f6f4;
             border-top: 1px solid var(--dark-border);
             border-bottom: 1px solid var(--dark-border);
             text-align: center;
@@ -551,7 +549,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at center, rgba(201, 151, 46, 0.06) 0%, transparent 60%);
+            background: radial-gradient(ellipse at center, rgba(201, 151, 46, 0.04) 0%, transparent 60%);
         }
         .cta-band h2 {
             font-family: var(--font-display);
@@ -559,6 +557,7 @@
             font-size: clamp(2rem, 4.6vw, 3.2rem);
             position: relative;
             z-index: 1;
+            color: var(--bone);
         }
         .cta-band h2 em {
             color: var(--gold);
@@ -575,12 +574,21 @@
             position: relative;
             z-index: 1;
         }
+        .cta-band .btn-outline-light {
+            color: var(--bone);
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+        .cta-band .btn-outline-light:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
 
-        /* ── FOOTER ── */
+        /* ── FOOTER (DARK GREY) ── */
         .site-footer {
-            background: var(--dark);
-            border-top: 1px solid var(--dark-border);
+            background: #2a2a2a;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             padding: 3rem 2rem 1.5rem;
+            color: #d0d0d0;
         }
         .footer-grid {
             max-width: 1240px;
@@ -593,18 +601,19 @@
             font-family: var(--font-display);
             font-weight: 700;
             font-size: 1.5rem;
+            color: #ffffff;
         }
         .footer-brand .fb-logo span {
             color: var(--gold);
         }
         .footer-brand .fb-tag {
-            color: var(--muted);
+            color: #b0b0b0;
             font-size: 0.85rem;
             max-width: 300px;
             margin: 0.6rem 0 1rem;
         }
         .footer-brand .fb-addr {
-            color: var(--bone-muted);
+            color: #b0b0b0;
             font-size: 0.8rem;
             line-height: 1.8;
         }
@@ -612,11 +621,11 @@
             font-family: var(--font-display);
             font-size: 1rem;
             margin-bottom: 1rem;
-            color: var(--bone);
+            color: #ffffff;
         }
         .footer-col a {
             display: block;
-            color: var(--muted);
+            color: #b0b0b0;
             text-decoration: none;
             font-size: 0.85rem;
             padding: 0.3rem 0;
@@ -630,11 +639,11 @@
             max-width: 1240px;
             margin: 2rem auto 0;
             padding-top: 1.5rem;
-            border-top: 1px solid var(--dark-border);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             display: flex;
             justify-content: space-between;
             font-size: 0.75rem;
-            color: var(--muted);
+            color: #888;
         }
 
         /* ── RESPONSIVE ── */
@@ -702,7 +711,7 @@
             <img src="HUMAN logo.png" alt="Bespat Holdings Logo" onerror="this.style.display='none'; this.parentElement.querySelector('.logo-fallback').style.display='flex';" />
             <div class="logo-text" style="display:flex; align-items:center; gap:0.7rem;">
                 <span class="logo-fallback">B</span>
-                <span>BESPAT <span style="font-weight:300;color:var(--bone-muted);">HOLDINGS</span></span>
+                <span>BESPAT <span style="font-weight:300;color:rgba(255,255,255,0.6);">HOLDINGS</span></span>
             </div>
         </a>
 
@@ -720,7 +729,7 @@
             <li><a href="fuel-retail.html">Fuel Retail</a></li>
             <li><a href="distribution.html">Distribution</a></li>
             <li><a href="agri-trade.html">Agri-Trade &amp; Farms</a></li>
-            <li><a class="nav-cta" href="contact-group.html" style="background:linear-gradient(135deg, var(--gold), var(--gold-light)); color:var(--dark);">Contact Group</a></li>
+            <li><a class="nav-cta" href="contact-group.html" style="background:linear-gradient(135deg, var(--gold), var(--gold-light)); color:#ffffff;">Contact Group</a></li>
         </ul>
     </nav>
 
@@ -729,7 +738,7 @@
         <div class="page-hero-bg"></div>
         <div class="gold-accent"></div>
         <div class="page-hero-inner">
-            <span class="eyebrow">Get in Touch</span>
+            <span class="eyebrow" style="color:var(--gold); text-shadow:0 2px 10px rgba(0,0,0,0.5);">Get in Touch</span>
             <h1>Contact <em>the Group Office</em></h1>
             <p class="lead">Reach out to Bespat Holdings directly — whether you're looking to partner with one of our six divisions, explore investment opportunities, or simply have a question about our work.</p>
             <div class="page-hero-btns">
@@ -742,7 +751,7 @@
     <div class="divider"></div>
 
     <!-- ══ CONTACT CARDS ══ -->
-    <section class="sec" style="background: var(--dark);">
+    <section class="sec" style="background: #ffffff;">
         <div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem;">
             <div class="sec-header center">
                 <span class="eyebrow">Connect With Us</span>
@@ -777,7 +786,7 @@
     <div class="divider"></div>
 
     <!-- ══ DIVISION CONTACTS ══ -->
-    <section class="sec" style="background: var(--dark-surface); border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border);">
+    <section class="sec" style="background: #f8f6f4; border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border);">
         <div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem;">
             <div class="sec-header center">
                 <span class="eyebrow">Division Contacts</span>
@@ -840,7 +849,7 @@
     <div class="divider"></div>
 
     <!-- ══ MAP PLACEHOLDER ══ -->
-    <section class="sec" style="background: var(--dark);">
+    <section class="sec" style="background: #ffffff;">
         <div class="container" style="max-width:1280px;margin:0 auto;padding:0 2rem;">
             <div class="sec-header center">
                 <span class="eyebrow">Location</span>
@@ -869,7 +878,7 @@
         </div>
     </div>
 
-    <!-- ══ FOOTER ══ -->
+    <!-- ══ FOOTER (DARK GREY) ══ -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
